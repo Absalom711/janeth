@@ -4,12 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nanapo Auto Panel Repair | Windhoek</title>
-  <meta name="description" content="Nanapo Auto Panel Repair in Windhoek. Accident repairs, panel beating, spray painting, polishing and fiberglass repairs. Call or WhatsApp +264 81 318 0180" />
+  <meta name="description" content="Nanapo Auto Panel Repair in Windhoek. Professional accident repairs, panel beating, spray painting, dent removal, and detailing. Call or WhatsApp +264 81 318 0180" />
 
   <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
+    :root {
+      --red: #e10600;
+      --dark: #0b0b0b;
+      --dark2: #151515;
+      --light: #ffffff;
+      --grey: #cccccc;
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -18,8 +26,8 @@
     }
 
     body {
-      background: #0f0f0f;
-      color: #fff;
+      background: var(--dark);
+      color: var(--light);
       scroll-behavior: smooth;
     }
 
@@ -34,7 +42,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 15px 8%;
-      background: #000;
+      background: rgba(0,0,0,0.95);
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -42,9 +50,16 @@
     }
 
     .logo {
-      font-size: 22px;
-      font-weight: 700;
-      color: #00ff88;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--light);
+    }
+
+    .logo span {
+      color: var(--red);
     }
 
     nav a {
@@ -54,68 +69,71 @@
     }
 
     nav a:hover {
-      color: #00ff88;
+      color: var(--red);
     }
 
     /* HERO */
     .hero {
-      min-height: 90vh;
+      min-height: 95vh;
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 60px 8%;
-      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-        url('https://images.unsplash.com/1552519507-da3b142c6e3d?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+        url('https://images.unsplash.com/1549921296-3cceab7d84df?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
       flex-wrap: wrap;
     }
 
     .hero-text {
-      max-width: 500px;
+      max-width: 520px;
     }
 
     .hero-text h1 {
-      font-size: 42px;
+      font-size: 44px;
       margin-bottom: 15px;
-      color: #00ff88;
+      line-height: 1.2;
+    }
+
+    .hero-text h1 span {
+      color: var(--red);
     }
 
     .hero-text p {
-      margin-bottom: 25px;
+      margin-bottom: 30px;
       line-height: 1.6;
-      color: #ccc;
+      color: var(--grey);
     }
 
     .hero-buttons a {
       display: inline-block;
       margin-right: 15px;
-      padding: 12px 25px;
+      padding: 14px 28px;
       border-radius: 30px;
       font-size: 14px;
+      font-weight: 600;
       transition: 0.3s;
     }
 
     .call-btn {
-      background: #00ff88;
-      color: #000;
-      font-weight: 600;
+      background: var(--red);
+      color: #fff;
     }
 
     .call-btn:hover {
-      background: #00cc6f;
+      background: #b00500;
     }
 
     .whatsapp-btn {
-      border: 2px solid #00ff88;
+      border: 2px solid var(--red);
     }
 
     .whatsapp-btn:hover {
-      background: #00ff88;
-      color: #000;
+      background: var(--red);
     }
 
     /* SECTIONS */
     section {
-      padding: 80px 8%;
+      padding: 90px 8%;
     }
 
     .section-title {
@@ -124,20 +142,20 @@
     }
 
     .section-title h2 {
-      font-size: 32px;
-      color: #00ff88;
+      font-size: 34px;
+      color: var(--red);
     }
 
     /* SERVICES */
     .services {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 25px;
     }
 
     .service-card {
-      background: #151515;
-      padding: 25px;
+      background: var(--dark2);
+      padding: 30px;
       border-radius: 15px;
       text-align: center;
       transition: 0.3s;
@@ -145,8 +163,8 @@
     }
 
     .service-card:hover {
-      transform: translateY(-5px);
-      border-color: #00ff88;
+      transform: translateY(-8px);
+      border-color: var(--red);
     }
 
     .service-card h3 {
@@ -163,10 +181,54 @@
     }
 
     .why div {
-      background: #151515;
-      padding: 30px;
+      background: var(--dark2);
+      padding: 35px;
       border-radius: 15px;
       border: 1px solid #222;
+      transition: 0.3s;
+    }
+
+    .why div:hover {
+      border-color: var(--red);
+      transform: translateY(-5px);
+    }
+
+    /* BEFORE AFTER SLIDER */
+    .slider {
+      position: relative;
+      max-width: 700px;
+      margin: auto;
+      overflow: hidden;
+      border-radius: 15px;
+      border: 2px solid #222;
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .slides img {
+      width: 100%;
+      flex-shrink: 0;
+    }
+
+    .slider-buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    .slider-buttons button {
+      background: var(--red);
+      border: none;
+      color: #fff;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 50%;
     }
 
     /* GALLERY */
@@ -179,7 +241,7 @@
     .gallery img {
       width: 100%;
       border-radius: 12px;
-      height: 200px;
+      height: 220px;
       object-fit: cover;
       transition: 0.3s;
     }
@@ -198,7 +260,7 @@
 
     .contact-info p {
       margin: 10px 0;
-      color: #ccc;
+      color: var(--grey);
     }
 
     iframe {
@@ -208,10 +270,32 @@
       border: none;
     }
 
+    form {
+      margin-top: 20px;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 8px;
+      border: none;
+    }
+
+    form button {
+      background: var(--red);
+      color: #fff;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
     /* FOOTER */
     footer {
       text-align: center;
-      padding: 20px;
+      padding: 25px;
       background: #000;
       border-top: 1px solid #222;
       color: #777;
@@ -238,12 +322,12 @@
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background: #00ff88;
-      color: #000;
+      background: var(--red);
+      color: #fff;
       padding: 15px 20px;
       border-radius: 50px;
       font-weight: 600;
-      box-shadow: 0 0 20px rgba(0,255,136,0.5);
+      box-shadow: 0 0 20px rgba(225,6,0,0.6);
       z-index: 999;
     }
   </style>
@@ -253,10 +337,11 @@
 
   <!-- HEADER -->
   <header>
-    <div class="logo">Nanapo Auto Panel Repair</div>
+    <div class="logo">NANAPO <span>AUTO PANEL REPAIR</span></div>
     <nav>
       <a href="#home">Home</a>
       <a href="#services">Services</a>
+      <a href="#beforeafter">Before & After</a>
       <a href="#gallery">Gallery</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -265,8 +350,8 @@
   <!-- HERO -->
   <section class="hero" id="home">
     <div class="hero-text">
-      <h1>Professional Auto Panel Repair in Windhoek</h1>
-      <p>Accident repairs, spray painting, dent removal and professional panel beating. Quality workmanship with fast turnaround time.</p>
+      <h1>Professional <span>Auto Panel Repair</span> in Windhoek</h1>
+      <p>Accident repairs, spray painting, dent removal and professional panel beating. Trusted, fast and affordable auto body services.</p>
       <div class="hero-buttons">
         <a href="tel:+264813180180" class="call-btn">Call Now</a>
         <a href="https://wa.me/264813180180" class="whatsapp-btn">WhatsApp Us</a>
@@ -281,38 +366,31 @@
     </div>
 
     <div class="services">
-      <div class="service-card">
-        <h3>Accident Repairs & Dent Removal</h3>
-      </div>
-      <div class="service-card">
-        <h3>Precision Auto Painting</h3>
-      </div>
-      <div class="service-card">
-        <h3>Panel Beating</h3>
-      </div>
-      <div class="service-card">
-        <h3>Car Polishing & Detailing</h3>
-      </div>
-      <div class="service-card">
-        <h3>Headlight Restoration</h3>
-      </div>
-      <div class="service-card">
-        <h3>Fiberglass Repairs</h3>
-      </div>
+      <div class="service-card"><h3>Accident Repairs & Dent Removal</h3></div>
+      <div class="service-card"><h3>Precision Auto Painting</h3></div>
+      <div class="service-card"><h3>Panel Beating</h3></div>
+      <div class="service-card"><h3>Car Polishing & Detailing</h3></div>
+      <div class="service-card"><h3>Headlight Restoration</h3></div>
+      <div class="service-card"><h3>Fiberglass Repairs</h3></div>
     </div>
   </section>
 
-  <!-- WHY US -->
-  <section>
+  <!-- BEFORE AFTER -->
+  <section id="beforeafter">
     <div class="section-title">
-      <h2>Why Choose Us</h2>
+      <h2>Before & After</h2>
     </div>
 
-    <div class="why">
-      <div>✅ Experienced Technicians</div>
-      <div>✅ Fast Turnaround Time</div>
-      <div>✅ Quality Guaranteed</div>
-      <div>✅ Affordable Pricing</div>
+    <div class="slider">
+      <div class="slides" id="slides">
+        <img src="https://images.unsplash.com/1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=800&q=80" alt="Before Repair">
+        <img src="https://images.unsplash.com/1597000804693-8d6a0d9bceec?auto=format&fit=crop&w=800&q=80" alt="After Repair">
+      </div>
+
+      <div class="slider-buttons">
+        <button onclick="prevSlide()">❮</button>
+        <button onclick="nextSlide()">❯</button>
+      </div>
     </div>
   </section>
 
@@ -324,9 +402,9 @@
 
     <div class="gallery">
       <img src="https://images.unsplash.com/1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80" alt="Repair Work">
-      <img src="https://images.unsplash.com/1597000804693-8d6a0d9bceec?auto=format&fit=crop&w=800&q=80" alt="Spray Painting">
       <img src="https://images.unsplash.com/1592853625601-bb9d8c9e92f3?auto=format&fit=crop&w=800&q=80" alt="Panel Beating">
       <img src="https://images.unsplash.com/1549921296-3cceab7d84df?auto=format&fit=crop&w=800&q=80" alt="Finished Car">
+      <img src="https://images.unsplash.com/1597000804693-8d6a0d9bceec?auto=format&fit=crop&w=800&q=80" alt="Spray Painting">
     </div>
   </section>
 
@@ -343,6 +421,13 @@
         <p><strong>💬 WhatsApp:</strong> +264 81 318 0180</p>
         <p>Open Monday – Saturday</p>
 
+        <form action="mailto:info@nanapoauto.com" method="post" enctype="text/plain">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" rows="4" placeholder="Your Message"></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+
         <p style="margin-top:20px;">Scan to WhatsApp:</p>
         <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://wa.me/264813180180" alt="WhatsApp QR Code">
       </div>
@@ -358,6 +443,25 @@
 
   <!-- FLOATING WHATSAPP BUTTON -->
   <a class="float-whatsapp" href="https://wa.me/264813180180">WhatsApp</a>
+
+  <script>
+    let index = 0;
+    const slides = document.getElementById('slides');
+
+    function showSlide() {
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    function nextSlide() {
+      index = (index + 1) % 2;
+      showSlide();
+    }
+
+    function prevSlide() {
+      index = (index - 1 + 2) % 2;
+      showSlide();
+    }
+  </script>
 
 </body>
 </html>
