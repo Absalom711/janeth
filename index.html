@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nanapo Auto Panel Repair | Windhoek</title>
+  <meta name="description" content="Nanapo Auto Panel Repair in Windhoek. Accident repairs, panel beating, spray painting, polishing and fiberglass repairs. Call or WhatsApp +264 81 318 0180" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #0f0f0f;
+      color: #fff;
+      scroll-behavior: smooth;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* HEADER */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 8%;
+      background: #000;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid #222;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 700;
+      color: #00ff88;
+    }
+
+    nav a {
+      margin-left: 25px;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #00ff88;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 8%;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+        url('https://images.unsplash.com/1552519507-da3b142c6e3d?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      flex-wrap: wrap;
+    }
+
+    .hero-text {
+      max-width: 500px;
+    }
+
+    .hero-text h1 {
+      font-size: 42px;
+      margin-bottom: 15px;
+      color: #00ff88;
+    }
+
+    .hero-text p {
+      margin-bottom: 25px;
+      line-height: 1.6;
+      color: #ccc;
+    }
+
+    .hero-buttons a {
+      display: inline-block;
+      margin-right: 15px;
+      padding: 12px 25px;
+      border-radius: 30px;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    .call-btn {
+      background: #00ff88;
+      color: #000;
+      font-weight: 600;
+    }
+
+    .call-btn:hover {
+      background: #00cc6f;
+    }
+
+    .whatsapp-btn {
+      border: 2px solid #00ff88;
+    }
+
+    .whatsapp-btn:hover {
+      background: #00ff88;
+      color: #000;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 80px 8%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-size: 32px;
+      color: #00ff88;
+    }
+
+    /* SERVICES */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+    }
+
+    .service-card {
+      background: #151515;
+      padding: 25px;
+      border-radius: 15px;
+      text-align: center;
+      transition: 0.3s;
+      border: 1px solid #222;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      border-color: #00ff88;
+    }
+
+    .service-card h3 {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+
+    /* WHY US */
+    .why {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      text-align: center;
+    }
+
+    .why div {
+      background: #151515;
+      padding: 30px;
+      border-radius: 15px;
+      border: 1px solid #222;
+    }
+
+    /* GALLERY */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 12px;
+      height: 200px;
+      object-fit: cover;
+      transition: 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* CONTACT */
+    .contact-box {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      align-items: center;
+    }
+
+    .contact-info p {
+      margin: 10px 0;
+      color: #ccc;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border-radius: 15px;
+      border: none;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #000;
+      border-top: 1px solid #222;
+      color: #777;
+      font-size: 14px;
+    }
+
+    /* MOBILE */
+    @media(max-width: 768px) {
+      .hero {
+        text-align: center;
+      }
+
+      .hero-text h1 {
+        font-size: 32px;
+      }
+
+      nav {
+        display: none;
+      }
+    }
+
+    /* FLOATING WHATSAPP */
+    .float-whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #00ff88;
+      color: #000;
+      padding: 15px 20px;
+      border-radius: 50px;
+      font-weight: 600;
+      box-shadow: 0 0 20px rgba(0,255,136,0.5);
+      z-index: 999;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">Nanapo Auto Panel Repair</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h1>Professional Auto Panel Repair in Windhoek</h1>
+      <p>Accident repairs, spray painting, dent removal and professional panel beating. Quality workmanship with fast turnaround time.</p>
+      <div class="hero-buttons">
+        <a href="tel:+264813180180" class="call-btn">Call Now</a>
+        <a href="https://wa.me/264813180180" class="whatsapp-btn">WhatsApp Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="section-title">
+      <h2>Our Services</h2>
+    </div>
+
+    <div class="services">
+      <div class="service-card">
+        <h3>Accident Repairs & Dent Removal</h3>
+      </div>
+      <div class="service-card">
+        <h3>Precision Auto Painting</h3>
+      </div>
+      <div class="service-card">
+        <h3>Panel Beating</h3>
+      </div>
+      <div class="service-card">
+        <h3>Car Polishing & Detailing</h3>
+      </div>
+      <div class="service-card">
+        <h3>Headlight Restoration</h3>
+      </div>
+      <div class="service-card">
+        <h3>Fiberglass Repairs</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section>
+    <div class="section-title">
+      <h2>Why Choose Us</h2>
+    </div>
+
+    <div class="why">
+      <div>✅ Experienced Technicians</div>
+      <div>✅ Fast Turnaround Time</div>
+      <div>✅ Quality Guaranteed</div>
+      <div>✅ Affordable Pricing</div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <div class="section-title">
+      <h2>Our Work</h2>
+    </div>
+
+    <div class="gallery">
+      <img src="https://images.unsplash.com/1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80" alt="Repair Work">
+      <img src="https://images.unsplash.com/1597000804693-8d6a0d9bceec?auto=format&fit=crop&w=800&q=80" alt="Spray Painting">
+      <img src="https://images.unsplash.com/1592853625601-bb9d8c9e92f3?auto=format&fit=crop&w=800&q=80" alt="Panel Beating">
+      <img src="https://images.unsplash.com/1549921296-3cceab7d84df?auto=format&fit=crop&w=800&q=80" alt="Finished Car">
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-title">
+      <h2>Contact & Location</h2>
+    </div>
+
+    <div class="contact-box">
+      <div class="contact-info">
+        <p><strong>📍 Location:</strong> Soweto, Namcor Service Station, Soweto, Windhoek, Namibia</p>
+        <p><strong>📞 Phone:</strong> +264 81 318 0180</p>
+        <p><strong>💬 WhatsApp:</strong> +264 81 318 0180</p>
+        <p>Open Monday – Saturday</p>
+
+        <p style="margin-top:20px;">Scan to WhatsApp:</p>
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://wa.me/264813180180" alt="WhatsApp QR Code">
+      </div>
+
+      <iframe src="https://www.google.com/maps?q=Namcor%20Soweto%20Windhoek%20Namibia&output=embed"></iframe>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 Nanapo Auto Panel Repair | Windhoek, Namibia
+  </footer>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a class="float-whatsapp" href="https://wa.me/264813180180">WhatsApp</a>
+
+</body>
+</html>
